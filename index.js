@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 
-app.get('/yikes', function(req, res){
-    res.send("Hello world!");
-});
+var second_file = require('./second_file.js');
 
+app.use('/second_file', second_file);
 app.listen(3000);
