@@ -10,25 +10,23 @@
     <body>
         <div class = "container">
             <div class = "box">
-                <h1>Photo Information Finder</h1>
-                <p>Upload the file here</p>
+                <h1>File Information Finder</h1>
+                <h3>Upload your file here</h3>
                 <form action="/upload_pic" method="POST" style="font-family:product sans;" enctype="multipart/form-data">
-                    <input type="file" name='pic'/>
+                    <input type="file" name='pic' class='btn'/>
                     <br>
                     <br>
-                    <button type="submit" class="btn"> Find Info</button>
+                    <button type="submit" class="btn" style="margin-top:5px"> Find Information</button>
                 </form>
-
-                <div style="display:blocked">
-                    <p>
-                        File Name: <%  locals.original_name %> <br><br>
-                        File Type: <%  locals.file_type %> <br><br>
-                        File Size: <%  locals.file_size %> <br>
-                    </p>
+                <% if(typeof original_name !== 'undefined' && file_type !== 'undefined' && file_size !== 'undefined' && file_extension !== 'undefined'){ %>
+                <div class="info">
+                        <b>FILE NAME:        </b><%=  original_name %> <br><br>
+                        <b>FILE EXTENSION:   </b><%=  file_extension %> <br><br>
+                        <b>FILE TYPE:        </b><%=  file_type %> <br><br>
+                        <b>FILE SIZE:        </b><%=  file_size %> <br><br>
+                <% } %>
                 </div>
             </div>
-
-
         </div>
     </body>
 </html>
