@@ -1,0 +1,38 @@
+.box{
+    position: absolute;
+    left:50%;
+    top:50%;
+    background-color:red;
+    border-radius: 10px;
+    color:white;
+    font-family: product sans;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    height: 500px;
+    width: 400px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+}
+.btn{
+    padding: 20px;
+    margin: 40px auto;
+    border: 0;
+    border-radius: 20px;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    position: relative;
+    background-color:gold;
+    font-family: product sans;
+    font-weight: bolder;
+    font-size: large;
+}
